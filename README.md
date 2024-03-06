@@ -6,7 +6,7 @@ Traditionally, solving these equations relied on analytical methods suited for s
 
 SciML stands out by leveraging machine learning algorithms, especially neural networks, to approximate solutions to differential equations more efficiently. These networks are trained to minimize the difference between their predictions and actual solutions, offering a powerful tool for tackling complex equations.
 
-In this Julia notebook, we apply SciML to the Hénon-Heiles system, demonstrating how this method can illuminate and solve challenging mathematical problems.
+In this Julia notebook, SciML was applied to the Hénon-Heiles system, demonstrating how this method can illuminate and solve challenging mathematical problems.
 
 
 ## The Hénon-Heiles System
@@ -42,7 +42,8 @@ The function's equations are aligned with the motion equations derived from the 
 
 To analyze the Hénon-Heiles system's dynamics, initial conditions and a simulation time span are established:
 
-- `u0` sets the system's initial state with positions `x=0.2` and `y=0.0`, along with velocities `p_x=0.4` and `p_y=0.0`.
+- `u0` sets the system's initial state wi
+- th positions `x=0.2` and `y=0.0`, along with velocities `p_x=0.4` and `p_y=0.0`.
 - `tspan` delineates the simulation period, extending from `t=0` to `t=500`.
 - `prob = ODEProblem(henonheiles,u0,tspan)` crafts an ODE problem instance, incorporating the `henonheiles` function, the initial conditions `u0`, and the defined time span `tspan`. This formulation is then ready for solution using Julia's suite of ODE solvers.
 
@@ -52,7 +53,7 @@ This setup allows for the exploration of the Hénon-Heiles system within a compu
 
 ### Overview
 
-In the study of differential equations, selecting an appropriate numerical solver is crucial, as each solver has its own strengths and weaknesses depending on the specific characteristics of the system being analyzed. For the Hénon-Heiles system, we explored three different solvers: `Tsit5()`, a stiff solver, and Julia's default solver, to understand their performance and suitability for our problem.
+In the study of differential equations, selecting an appropriate numerical solver is crucial, as each solver has its own strengths and weaknesses depending on the specific characteristics of the system being analyzed. For the Hénon-Heiles system, three different solvers were explored: `Tsit5()`, a stiff solver, and Julia's default solver, to understand their performance and suitability for our problem.
 
 ### Tsit5() Solver
 
@@ -95,7 +96,7 @@ This is the graph of the system which solves with Default Solver:
 
 ## Investigating the Potential Energy Function of the Hénon-Heiles System
 
-In our study, we delve into the potential energy function `V(x, y)` characterizing the Hénon-Heiles system. To explore this, we define ranges for `x` and `y` to span the `x-y` plane, each ranging from `-0.75` to `0.75` with a step size of `0.05`. This setup is pivotal for evaluating `V(x, y)` across a grid, facilitating a detailed visualization of the system's potential energy landscape.
+In our study, the potential energy function `V(x, y)` characterizing the Hénon-Heiles system was searched in detail. To explore this, ranges for `x` and `y` to span the `x-y` plane were defined, each ranging from `-0.75` to `0.75` with a step size of `0.05`. This setup is pivotal for evaluating `V(x, y)` across a grid, facilitating a detailed visualization of the system's potential energy landscape.
 
 The potential energy function, `V(x, y)`, is mathematically expressed as:
 
@@ -108,7 +109,7 @@ This formulation includes several key components:
 - **Coupling Term**: `x^2y`, introducing non-linear interactions between the `x` and `y` coordinates.
 - **Cubic Term**: `-1/3y^3`, injecting asymmetry into the potential, thereby enriching the system with non-linear dynamics and the potential for chaotic behavior.
 
-Through this exploration, we aim to provide a comprehensive understanding of the forces at play within the Hénon-Heiles system and how they contribute to its fascinating dynamics.
+Through this exploration, the aim is to provide a comprehensive understanding of the forces at play within the Hénon-Heiles system and how they contribute to its fascinating dynamics.
 
 Included are several graphical representations of the potential energy component of the Hénon-Heiles Hamiltonian:
 
